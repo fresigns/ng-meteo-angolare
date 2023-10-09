@@ -1,0 +1,25 @@
+<!-- <p>meteo-table works!</p> -->
+<table>
+    <thead>
+        <tr>
+            <th>time</th>
+            <th>tempe</th>
+            <th>code</th>
+            <th>wind</th>
+            <th>hum</th>
+            <th>prec</th>
+            <th>cloud</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let forecast of forecastArray">
+            <td>{{forecast.time}}</td>
+            <td><b>{{forecast.temperature}} {{forecast.temperatureUnit}} </b></td>
+            <td>{{forecast.weatherCode}}</td>
+            <td>{{forecast.windSpeed}} {{forecast.windSpeedUnit}}</td>
+            <td>{{forecast.humidity}} {{forecast.humidityUnit}}</td>
+            <td>{{forecast.precipitation}} {{forecast.precipitationUnit}}</td>
+            <td>{{forecast.cloudCover}} {{forecast.cloudCoverUnit}}</td>
+        </tr>
+    </tbody>
+</table>
